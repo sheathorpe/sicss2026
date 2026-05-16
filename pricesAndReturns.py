@@ -33,11 +33,12 @@ prices = yf.download(
 returns = (prices/prices.shift(1))
 logReturns = np.log(returns)
 
-([prices, returns, logReturns]).index.name = "Date"
+returns = returns.tail(-1)
+logReturns = logReturns.tail(-1)
 
-pricesFile = "Documents/tenYearPrices.csv"
-returnsFile = "Documents/tenYearReturns.csv"
-logReturnsFile = "Documents/tenYearLogReturns.csv"
+pricesFile = "data/tenYearPrices.csv"
+returnsFile = "data/tenYearReturns.csv"
+logReturnsFile = "data/tenYearLogReturns.csv"
 
 prices.to_csv(pricesFile)
 returns.to_csv(returnsFile)
