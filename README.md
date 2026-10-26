@@ -7,4 +7,4 @@ We gather ticker price data dating back to 2023, and run OLS regressions over a 
 
 We compare expected return to actual return, in search of abnormal return. Our research paper contains our findings. Or you can run the code for yourself. 
 
-Required installations listed in code.
+Required installations listed in code. 
